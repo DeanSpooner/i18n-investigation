@@ -1,7 +1,8 @@
 {
     "instructions": {
       "howManyPointsDidXScoreInTotal": "How many points did {0} score in total? {1:number}",
-      "theyScoredNumPoints": "They scored {0:numberFormat} {{point|s}}."
+      "theyScoredNumPoints": "They scored {0:numberFormat} {{point|s}}.",
+      "iAmOnlyInEnglish": "I am only in English."
     },
     "misc": {
       "teamA": "Team A"

@@ -1,10 +1,9 @@
-import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
-import { getLocales } from "react-native-localize";
+import * as Localization from 'expo-localization';
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
 
-// Initialize i18n
 i18n
-  .use(initReactI18next) // Pass i18n down to react-i18next
+  .use(initReactI18next)
   .init({
     resources: {
       en: {
@@ -14,10 +13,11 @@ i18n
         translation: require('./locales/ja.json'),
       },
     },
-    lng: getLocales()[0]?.languageCode || "en", // Detect language
+    fallbackLng: 'en',
+    lng: Localization.getLocales()[0].languageCode || 'en', // Use Expo's localization to get the locale
     interpolation: {
-      escapeValue: false, // React already handles escaping
-      formatSeparator: ':', // Allow multiple formats in a string
+      escapeValue: false,
+      formatSeparator: ':',
       prefix: '{',
       suffix: '}',
     },

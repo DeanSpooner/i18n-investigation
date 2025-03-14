@@ -21,6 +21,9 @@ const App = () => {
       <Text style={styles.text}>
         {translate("instructions.theyScoredNumPoints")(scoreB)}
       </Text>
+      <Text style={styles.text}>
+        {translate("instructions.iAmOnlyInEnglish")()}
+      </Text>
     </View>
   );
 };
