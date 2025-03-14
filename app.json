@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "i18n-investigation2",
-    "slug": "i18n-investigation2",
+    "name": "i18n-investigation",
+    "slug": "i18n-investigation",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

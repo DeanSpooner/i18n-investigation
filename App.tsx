@@ -1,20 +1,41 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { Text, View, StyleSheet } from "react-native";
+import "./i18n"; // Import the i18n configuration
+import { useTranslationWithFunction } from "./useTranslationWithFunction";
 
-export default function App() {
+const App = () => {
+  const { translate } = useTranslationWithFunction();
+
+  const team = translate("misc.teamA")();
+  const scoreA = 1234567;
+  const scoreB = 1;
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text style={styles.text}>
+        {translate("instructions.howManyPointsDidXScoreInTotal")(team, scoreA)}
+      </Text>
+      <Text style={styles.text}>
+        {translate("instructions.theyScoredNumPoints")(scoreA)}
+      </Text>
+      <Text style={styles.text}>
+        {translate("instructions.theyScoredNumPoints")(scoreB)}
+      </Text>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#f5f5f5",
+  },
+  text: {
+    fontSize: 18,
+    color: "#333",
   },
 });
+
+export default App;

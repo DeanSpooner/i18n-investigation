@@ -1,0 +1,9 @@
+{
+    "instructions": {
+      "howManyPointsDidXScoreInTotal": "{0}は幾つの点を勝ちましたか? {1:number}",
+      "theyScoredNumPoints": "{0:number}点を勝ちました。"
+    },
+    "misc": {
+      "teamA": "チームA"
+    }
+  }
